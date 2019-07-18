@@ -1,5 +1,8 @@
 <?php require_once 'config.php'; ?>
+<?php require_once DBAPI; ?>
+
 <?php include(HEADER_TEMPLATE); ?>
+<?php $db = open_database(); ?>
 
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -29,5 +32,15 @@
         </div>
     </div>
 </section>
+
+<?php
+    $db = open_database();
+
+    if ($db) {
+        echo '<h1>Banco de Dados Conectado!</h1>';
+    } else {
+        echo '<h1>ERRO: Não foi possível Conectar!</h1>';
+    }
+?>
 
 <?php include(FOOTER_TEMPLATE); ?>
