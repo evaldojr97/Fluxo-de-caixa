@@ -1,4 +1,4 @@
-<?php require_once 'config.php'; ?>
+<?php require_once('../config.php'); ?>
 <?php include(HEADER_TEMPLATE); ?>
 
 <header>
@@ -9,8 +9,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="index.php">HOME <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="./pages/openingBalance.php">SALDO INICIAL</a>
+                <a class="nav-item nav-link" href="../index.php">HOME <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link active" href="openingBalance.php">SALDO INICIAL</a>
                 <a class="nav-item nav-link" href="#">CONTAS A PAGAR</a>
                 <a class="nav-item nav-link" href="#">CONTAS A RECEBER</a>
                 <a class="nav-item nav-link" href="#">PAGAMENTO EM CAIXA</a>
@@ -24,8 +24,21 @@
     <div class="container">
         <div class="row">
             <article class="col-md-12">
-                <h1>Configure seu saldo inicial para abertura do caixa</h1>
+                <h1>Quanto há de dinheiro para a abertura do caixa?</h1>
             </article>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 offset-sm-4">
+                <form class="form-inline" method="post">
+                    <div class="form-group mx-sm-3 mb-2">
+                        <input class="form-control" type="text" name="saldo" placeholder="Ex. : 1000.00">
+                    </div>
+                    <button class="btn btn-dark mb-2" name="entrar" value="entrar">Abrir Caixa</button>
+                </form>
+            </div>
         </div>
     </div>
 </section>
